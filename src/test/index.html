@@ -2,15 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../output.css" rel="stylesheet">
-    <title>Test CSS</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../output.css" rel="stylesheet">
+  <title>Test CSS</title>
 </head>
 
 <body>
-    <h1 class="underline bg-orange-500">Testing Taliwind CSS</h1>
+  <h2 class="underline">Two Grid Layout, Mobile:2 PC:2</h2>
+  <div class="m-4 grid grid-cols-2 gap-4 sm:grid-cols-2">
+    <div class="min-h-[100px] rounded bg-orange-400 shadow-xl">1</div>
+    <div class="min-h-[100px] rounded bg-teal-500 shadow-xl">2</div>
+  </div>
+
+  <h2 class="underline">Three Grid Layout, Mobile:1 PC:3</h2>
+  <div class="m-4 grid gap-4 sm:grid-cols-3">
+    <div class="min-h-[100px] rounded bg-orange-400 shadow-xl">1</div>
+    <div class="min-h-[100px] rounded bg-teal-500 shadow-xl">2</div>
+    <div class="min-h-[100px] rounded bg-red-500 shadow-xl">3</div>
+  </div>
+
+  <h2 class="underline">(Unequal) Twelve Grid Layout Breakdown, Mobile:1 PC:2, first grid:2columns, last grid: 10columns
+    columns</h2>
+  <div class="m-4 grid gap-4 sm:grid-cols-12">
+    <div class="min-h-[100px] rounded bg-orange-400 shadow-xl sm:col-span-2">1</div>
+    <div class="min-h-[100px] rounded bg-teal-500 shadow-xl sm:col-span-10">2</div>
+  </div>
+
+  <h2 class="underline">(Unequal) Twelve Grid Layout Breakdown, Mobile:1 and other 2 hidden PC:3, first grid:2columns,
+    second grid: 8, last grid: 2columns
+    columns</h2>
+  <div class="m-4 grid gap-4 sm:grid-cols-12">
+    <div class="hidden min-h-[100px] rounded bg-orange-400 shadow-xl sm:col-span-2 sm:block">1</div>
+    <div class="min-h-[100px] rounded bg-teal-500 shadow-xl sm:col-span-8">2</div>
+    <div class="hidden min-h-[100px] rounded bg-red-500 shadow-xl sm:col-span-2 sm:block">3</div>
+  </div>
+
 </body>
 
 </html>
